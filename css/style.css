@@ -37,7 +37,6 @@ h1 span{
 
 
 .container{
-  position: absolute;
   width:100%;
   height:100%;
 }
@@ -49,13 +48,17 @@ h1 span{
   height:60px;
   background: #FFA500;
   border-bottom:1px solid #FFA500;
-  z-index:10;
+  z-index:9999;
+  position: fixed;
+    top: 0;
+    left: 0;
+  right: 0;
 }
 
-}
 
 .menu-content{
-  width:900px;
+  width:100%;
+  max-width:900px;
   position:relative;
   margin:0 auto;
 }
@@ -101,63 +104,12 @@ h1 span{
 /* Start page */
 
 .start-page{
-  position: relative;
   width:100%;
-  height: 200px;
-  background:url('../img/background/start-page.jpg');
-
-
-  
+  height: 275px;
+  background:url('../img/background/start-page.jpg') center center no-repeat;
+  background-size: cover;
+  margin: 61px 0 0 0;
 }
-
-
-/* Menu mobile */
-
-.menu-media{
-  position:relative;
-  width:100%;
-  height:90px;
-  background:#ada074;
-  z-index:1000;
-  display: none;
-
-}
-
-.menu-media .menu-content{
-  width:280px;
-  position:relative;
-  margin:0 auto;
-}
-
-.menu-media .menu-content .icon{
-  width:41px;
-  height:23px;
-  float:right;
-  line-height:100px;
-}
-
-.menu-click{
-  display:none;
-}
-
-
-.menu-click li {
-  position:relative;
-  width:100%;
-  height:70px;
-  color:#333333;
-  font-size:18px;
-  text-align:center;
-  line-height:70px;
-  z-index:1000;
-  border-bottom:1px solid #f2f2f2;
- }
-
-.menu-click li:hover {
-  color:#ada074;
- }
-
-
 
 
 /* About us */
@@ -171,7 +123,8 @@ h1 span{
 
 .about-us .content{
   position:relative;
-  width:900px;
+  width:100%;
+  max-width:900px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -402,7 +355,7 @@ h1 span{
 }
 
 .grid li{
-  width:285px;
+  width:285px; /* 25% */
   margin:0 15px 15px 0;
   float: left;
   position: relative;
@@ -731,5 +684,49 @@ input.submit{
   font-size:14px;
   line-height:36px;
   color:#a4a4a4;
+}
+
+/* mobile */
+@media screen and (max-width: 767px) {
+  .grid img {
+    width:100%;
+  }
+}
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body {font-size: 2em;}
+}
+
+
+
+
+.black_overlay{
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index:1001;
+  opacity:.80;
+} 
+
+.white_content {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  padding: 16px;
+  border: 16px solid orange;
+  background-color: white;
+  z-index:1002;
+  overflow: auto;
+}
+
+.white_content p {
+  color: black;
 }
 
