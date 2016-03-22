@@ -23,3 +23,7 @@ $('.js-close').on('click', function(){
 	$('#light').css('display', 'none');
 	$('#fade').css('display', 'none');	
 });
+
+$('a').on('click', function(e) {
+	e.preventDefault();
+});

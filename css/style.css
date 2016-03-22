@@ -359,7 +359,7 @@ h1 span{
   margin:0 15px 15px 0;
   float: left;
   position: relative;
-  overflow: hidden;
+  
 }
 
 .grid img{
@@ -715,18 +715,30 @@ input.submit{
 .white_content {
   display: none;
   position: absolute;
-  top: 25%;
-  left: 25%;
-  width: 50%;
-  height: 50%;
+  top: 0%;
+  left: 30%;
+  width: 30%;
+  height: 85%;
   padding: 16px;
-  border: 16px solid orange;
+  border: 10px solid orange;
   background-color: white;
   z-index:1002;
   overflow: auto;
 }
 
+.white_content li{
+    font-size: 14px;
+    color: black;
+    margin-top:5px;
+      
+ }
+
+ ul li {
+  list-style-type: disc;
+ }
+
 .white_content p {
   color: black;
+  font-size: 12px;
 }
 
